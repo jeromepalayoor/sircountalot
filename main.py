@@ -2,6 +2,7 @@ import discord
 from discord import app_commands
 from discord.ext import commands
 import json
+import os
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -105,4 +106,4 @@ async def on_message(message):
 
 with open('secret', 'r') as f:
     secret=f.read()
-client.run(secret)
+client.run(os.environ['DISCORD_TOKEN'])
