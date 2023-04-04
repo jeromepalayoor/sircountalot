@@ -103,7 +103,4 @@ async def on_message(message):
         except:
             pass
 
-
-with open('secret', 'r') as f:
-    secret=f.read()
 client.run(os.environ['DISCORD_TOKEN'])
